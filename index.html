@@ -9,13 +9,15 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: center; /* Center all content horizontally */
+            justify-content: flex-start; /* Align content at the top */
             background-color: #000;
             color: white;
+            min-height: 100vh;
         }
 
         h1 {
-            font-size: 8vw; /* Scales with screen size */
+            font-size: 6vw; /* Scales with screen size */
             font-weight: bold;
             text-transform: uppercase;
             text-align: center;
@@ -24,40 +26,58 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 1px white;
-            margin-bottom: -30px; /* Reduce gap for smaller screens */
+            margin-bottom: -20px;
         }
 
         .subtitle {
-            font-size: 2.5vw; /* Scales with screen size */
+            font-size: 1.5vw; /* Scales with screen size */
             font-family: 'Pacifico', cursive;
-            color: #FF8C00; /* Dark orange */
+            color: #FF8C00;
             text-align: center;
-            margin-bottom: 20px; /* Reduced margin for better spacing on mobile */
+            margin-bottom: 20px;
         }
 
         .image-container {
             display: flex;
-            flex-wrap: wrap; /* Allows wrapping for small screens */
-            justify-content: center;
-            gap: 15px; /* Adjust spacing between images */
-            margin-top: 20px;
+            justify-content: center; /* Center images horizontally */
+            align-items: center;
+            width: 80%; /* Full width of the screen */
+            padding: 0 7%; /* Adjusted to balance spacing */
+            gap: 20px; /* Space between images */
         }
 
         .image-container img {
-            width: 80%; /* Scales to fit screen width */
-            max-width: 275px; /* Maintains original size on larger screens */
-            height: 60px; /* Maintain aspect ratio */
-            border: 2px solid white;
+            width: 90%; /* Increased width to reduce spacing */
+            height: 75px; /* Maintain aspect ratio */
+            border: 2px solid #FF8C00;
             border-radius: 10px;
         }
 
+        .footer-container {
+            display: flex;
+            justify-content: center; /* Center all images horizontally */
+            align-items: center;
+            width: 100%; /* Ensure it spans the bottom */
+            gap: 0; /* No gap between images */
+            padding: 10px 0; /* Padding for spacing */
+            margin-top: auto; /* Ensure footer is pushed to the bottom */
+        }
+
+        .footer-container img {
+            width: 50px; /* Set all images to 50px */
+            height: 40px; /* Set all images to 50px */
+            border: 2px solid white;
+            border-radius: 10px;
+            filter: invert(1); /* Invert the colors of the image */
+        }
+
         a {
-            text-decoration: none; /* Consistent link styling */
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 10vw; /* Increase font scaling for smaller screens */
+                font-size: 10vw; /* Make text larger on smaller screens */
             }
 
             .subtitle {
@@ -65,25 +85,47 @@
                 margin-bottom: 15px;
             }
 
+            .image-container {
+                flex-direction: column; /* Stack images on smaller screens */
+                gap: 20px; /* Add space between stacked images */
+                padding: 0; /* Remove padding */
+            }
+
             .image-container img {
-                width: 90%; /* Adjust image width further for very small screens */
-                max-width: 250px;
+                width: 60%; /* Larger images for smaller screens */
+            }
+
+            .footer-container {
+                flex-direction: column; /* Stack footer images on smaller screens */
+                gap: 5px; /* Smaller gap between stacked images */
+            }
+
+            .footer-container img {
+                width: 40%; /* Larger images for smaller screens */
             }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <h1><a href="index.html">King Roberts</a></h1>
 
     <p class="subtitle">The 100% King</p>
 
+    <!-- Main Images -->
     <div class="image-container">
         <a href="multiplayer.html"><img src="multiplayerCC.png" alt="Multiplayer"></a>
         <a href="warzone.html"><img src="warzoneCC.png" alt="Warzone"></a>
         <a href="zombies.html"><img src="zombiesCC.png" alt="Zombies"></a>
     </div>
-    
+
+    <!-- Footer Images -->
+    <div class="footer-container">
+        <a href="https://discord.gg/GndesVxswF" target="_blank"><img src="Discord.png" alt="Image 1"></a>
+        <a href="https://www.youtube.com/@King-Roberts" target="_blank"><img src="Youtube.png" alt="Image 2"></a>
+        <a href="https://www.instagram.com/john__roberts__/" target="_blank"><img src="Instagram.png" alt="Image 3"></a>
+        <a href="https://www.twitch.tv/kingrobertsyt" target="_blank"><img src="Twitch.png" alt="Image 4"></a>
+        <a href="https://x.com/Kingroberts1st" target="_blank"><img src="Twitter.png" alt="Image 5"></a>
+    </div>
 </body>
 </html>
