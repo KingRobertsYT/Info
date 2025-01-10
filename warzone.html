@@ -24,13 +24,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 1px white;
-            margin-bottom: -40px; /* Make the heading and subtitle almost touch */
+            margin-bottom: -40px;
         }
 
         .subtitle {
             font-size: 24px;
             font-family: 'Pacifico', cursive;
-            color: #FF8C00; /* Dark orange */
+            color: #FF8C00; 
             text-align: center;
             margin-bottom: 20px;
         }
@@ -45,27 +45,47 @@
 
         .stats {
             display: flex;
-            justify-content: space-between; /* Distribute the stats evenly side by side */
-            width: 80%; /* Adjust this width as needed */
+            justify-content: space-between;
+            width: 80%;
             text-align: center;
         }
 
         .stat-container {
             margin-bottom: 20px;
-            width: 30%; /* Ensures each stat container takes up equal width */
+            width: 30%;
         }
 
         .stat-item {
             font-size: 20px;
             text-decoration: underline;
-            margin-bottom: 10px; /* Add space between the label and the value */
+            margin-bottom: 10px;
         }
 
         .stat-value {
             font-size: 18px;
-            color: #FF8C00; /* Dark orange */
+            color: #FF8C00;
         }
 
+        .image-container {
+            display: flex; /* Align image horizontally */
+            justify-content: center; /* Center the image horizontally */
+            align-items: center; /* Align image vertically */
+            width: 80%; /* Ensure the image stays within the page width */
+            margin-top: 40px;
+        }
+
+        .image-container a {
+            display: block; /* Ensures the entire area of the image is clickable */
+            width: 50%; /* Makes the image take up 50% of the container width */
+        }
+
+        .warzone-image {
+            width: 100%; /* Makes sure the image fills the container width */
+            height: auto; /* Maintain aspect ratio */
+            border: 5px solid #FF8C00;
+            border-radius: 10px;
+            display: block; /* Remove space below the image */
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
@@ -90,6 +110,13 @@
             <div class="stat-item">Games Played</div>
             <div class="stat-value">338</div>
         </div>
+    </div>
+
+    <!-- Image section with one clickable image -->
+    <div class="image-container">
+        <a href="https://www.youtube.com/watch?v=iJw6y5WolHg" target="_blank">
+            <img src="Abyss.jpg" alt="Warzone Image" class="warzone-image">
+        </a>
     </div>
 
 </body>

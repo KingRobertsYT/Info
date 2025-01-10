@@ -24,13 +24,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 1px white;
-            margin-bottom: -40px; /* Make the heading and subtitle almost touch */
+            margin-bottom: -40px;
         }
 
         .subtitle {
             font-size: 24px;
             font-family: 'Pacifico', cursive;
-            color: #FF8C00; /* Dark orange */
+            color: #FF8C00; 
             text-align: center;
             margin-bottom: 20px;
         }
@@ -45,32 +45,53 @@
 
         .stats {
             display: flex;
-            justify-content: space-between; /* Distribute the stats evenly side by side */
-            width: 80%; /* Adjust this width as needed */
+            justify-content: space-between;
+            width: 80%;
             text-align: center;
         }
 
         .stat-container {
             margin-bottom: 20px;
-            width: 30%; /* Ensures each stat container takes up equal width */
+            width: 30%;
         }
 
         .stat-item {
             font-size: 20px;
             text-decoration: underline;
-            margin-bottom: 10px; /* Add space between the label and the value */
+            margin-bottom: 10px;
         }
 
         .stat-value {
             font-size: 18px;
-            color: #FF8C00; /* Dark orange */
+            color: #FF8C00;
         }
 
+        .image-container {
+            display: flex; /* Align images side by side */
+            justify-content: center; /* Center the images horizontally */
+            align-items: center; /* Align them vertically if necessary */
+            gap: 20px; /* Adds space between the images */
+            width: 80%; /* Ensure the images stay within the page width */
+            margin-top: 40px;
+        }
+
+        .image-container a {
+            display: block; /* Ensures the entire area of the image is clickable */
+            width: 45%; /* Makes the images take up 45% of the container width */
+        }
+
+        .zombies-image {
+            width: 100%; /* Makes sure the image fills the container width */
+            height: auto; /* Maintain aspect ratio */
+            border: 5px solid #FF8C00;
+            border-radius: 10px;
+            display: block; /* Remove space below the image */
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1><a href="index2.html" style="color: white; text-decoration: none;">King Roberts</a></h1>
+    <h1><a href="index.html" style="color: white; text-decoration: none;">King Roberts</a></h1>
     <p class="subtitle">The 100% King</p>
 
     <div class="current-stats">Current Stats</div>
@@ -90,6 +111,16 @@
             <div class="stat-item">Highest Round</div>
             <div class="stat-value">63</div>
         </div>
+    </div>
+
+    <!-- Image section with two clickable images side by side -->
+    <div class="image-container">
+        <a href="https://www.youtube.com/watch?v=XDPNN19dWtQ" target="_blank">
+            <img src="Zombie100.jpg" alt="Zombies Image 1" class="zombies-image">
+        </a>
+        <a href="https://www.youtube.com/watch?v=z6_smzE7bto&t=2s" target="_blank">
+            <img src="Nebula.jpg" alt="Zombies Image 2" class="zombies-image">
+        </a>
     </div>
 
 </body>
