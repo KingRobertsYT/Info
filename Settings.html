@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Roberts Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comic+Sans+MS&display=swap" rel="stylesheet">
+    <style>
+        body {
+            
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 6vw;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0 0 1px white;
+            background: linear-gradient(to bottom, orange, black);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: -20px;
+        }
+
+        .subtitle {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.5vw;
+            color: #FF8C00;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .settings-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns */
+            gap: 20px;
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .settings {
+            padding: 10px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Apply Comic Sans to settings content only */
+        }
+
+        h3 {
+            text-align: center;
+            color: #FF8C00;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+
+        .signature {
+            font-family: 'Pacifico', cursive;
+            font-size: 16px;
+            color: #555;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Mobile-friendly adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 10vw;
+            }
+
+            .settings-container {
+                grid-template-columns: 1fr; /* Stack the settings vertically on smaller screens */
+                gap: 20px;
+            }
+
+            .settings {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .subtitle {
+                font-size: 6vw;
+            }
+
+            .signature {
+                font-size: 14px;
+                margin-right: 10px;
+            }
+        }
+
+        /* Extra mobile-friendly adjustments for very small screens */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 12vw;
+            }
+
+            .settings {
+                width: 100%;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Title -->
+    <h1>King Roberts</h1>
+
+    <!-- Subtitle -->
+    <p class="subtitle">The 100% King</p>
+
+    <!-- Settings Sections -->
+    <div class="settings-container">
+        <!-- Controller Settings Section -->
+        <div class="settings">
+            <h3>Controller Settings</h3>
+            <ul>
+                <li>Controller: Scuff PS5</li>
+                <li>Bumper Ping: Off</li>
+                <li>Flip L1/L2 and R1/R2: Off</li>
+                <li>Stick Layout Preset: Tactical</li>
+                <li>Controller Vibration: Off</li>
+                <li>Trigger Effects: Off</li>
+                <li>Deadzone Left Stick Min: 2</li>
+                <li>Deadzone Left Stick Max: 60</li>
+                <li>Deadzone Right Stick Min: 2</li>
+                <li>Deadzone Right Stick Max: 99</li>
+                <li>Trigger Left/Right: 0</li>
+                <li>Horizontal/Vertical Sensitivity: 1.6, 1.6</li>
+                <li>ADS: 1 x</li>
+                <li>Aim Response Curve: Dynamic</li>
+                <li>Aim Assist Type: Default</li>
+                <li>Automatic Sprint: Off</li>
+                <li>Sprint/Tactical Sprint Behavior: Toggle</li>
+            </ul>
+        </div>
+
+        <!-- Graphics Settings Section -->
+        <div class="settings">
+            <h3>Graphics Settings</h3>
+            <ul>
+                <li>Display Mode: Fullscreen Borderless</li>
+                <li>Display Adapter: NVIDIA GEFORCE RTX 4060</li>
+                <li>Aspect Ratio: Wide 16:9</li>
+                <li>Display Gamma: 2.2 (SRGB)</li>
+                <li>Brightness: Personal Preference</li>
+                <li>Constrain Mouse to Game Window: Off</li>
+                <li>Nvidia Reflex Low Latency: On</li>
+                <li>Eco Mode: Efficiency</li>
+                <li>V-Sync (Gameplay): Off</li>
+                <li>V-Sync (Menus): 100%</li>
+                <li>Custom Frame Rate Limit: Custom</li>
+                <li>Graphic Preset: Custom</li>
+                <li>Render Resolution: 75</li>
+                <li>Dynamic Resolution: Off</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="settings-container">
+        <!-- Audio Settings Section -->
+        <div class="settings">
+            <h3>Audio Settings</h3>
+            <ul>
+                <li>Headset: Astro A40 TR</li>
+                <li>Audio Mix: Sucker Punch</li>
+                <li>Speakers/Headphone Game sound device: Headphone (astro mixamp)</li>
+                <li>Speaker output: Stereo</li>
+                <li>Hit marker Sound Effects: Classic</li>
+                <li>Master Volume: 100</li>
+                <li>Gameplay Music Volume: 0</li>
+                <li>Dialogue Volume: 100</li>
+                <li>Effects Volume: 100</li>
+                <li>Cinematic Volume: 0</li>
+            </ul>
+        </div>
+
+        <!-- Loadouts Section -->
+        <div class="settings">
+            <h3>Loadouts</h3>
+            <ul>
+                <li>Ames</li>
+                <li>Jackle</li>
+                <li>Krig</li>
+                <li>Saug</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Signature -->
+    <div class="signature">
+        Tomm1207 & KaiCartel27
+    </div>
+
+</body>
+</html>
