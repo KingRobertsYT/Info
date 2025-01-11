@@ -14,7 +14,6 @@
             background-color: #000;
             color: white;
             min-height: 100vh;
-
         }
 
         h1 {
@@ -28,7 +27,6 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 1px white;
             margin-bottom: -20px;
-          
         }
 
         .subtitle {
@@ -50,11 +48,12 @@
             background-color: #FF8C00;
             color: white;
             padding: 12px 20px;
-            font-size: 1.2vw;
+            font-size: 1.5vw; /* Larger font for 'Menu' */
             border: none;
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            text-transform: uppercase; /* Make 'Menu' fully capitalized */
         }
 
         .dropdown .dropbtn:hover {
@@ -63,20 +62,26 @@
         }
 
         .dropdown-content {
-            display: none;
+            display: none; /* Default state is hidden */
             position: absolute;
             background-color: #333;
             min-width: 160px;
             z-index: 1;
             border-radius: 5px;
-            margin-top: 5px; /* Spacing between button and dropdown */
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            top: 100%; /* Position the dropdown directly below the button */
             left: 50%; /* Center the dropdown horizontally */
             transform: translateX(-50%); /* Adjust for perfect centering */
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        /* Comic Sans-like font for dropdown items */
+        /* Show the dropdown when hovering over the dropdown button */
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Styling for dropdown items */
         .dropdown-content a {
             color: white;
             padding: 12px 16px;
@@ -85,21 +90,20 @@
             font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans-like font */
             font-size: 1.2vw;
             text-align: center; /* Center the text */
-            border: 2px solid white; /* Add white outline */
+            border: 2px solid transparent; /* No border by default */
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
             margin: 5px 0; /* Space between each option */
+            text-transform: uppercase; /* Make options capitalized */
         }
 
+        /* Change border color when hovering over a dropdown item */
         .dropdown-content a:hover {
             background-color: #575757;
+            border-color: white; /* Add white border on hover */
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-            opacity: 1;
-        }
-
+        /* Main Images */
         .image-container {
             display: flex;
             justify-content: center; /* Center images horizontally */
@@ -121,6 +125,7 @@
             transform: scale(1.1);
         }
 
+        /* Footer Images */
         .footer-container {
             display: flex;
             justify-content: center; /* Center all images horizontally */
@@ -189,9 +194,7 @@
     <div class="dropdown">
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
-            <a href="multiplayer.html">Multiplayer</a>
-            <a href="warzone.html">Warzone</a>
-            <a href="zombies.html">Zombies</a>
+            <a href="Merch.html">100K Merch</a>
         </div>
     </div>
 
