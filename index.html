@@ -26,8 +26,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 1px white;
-            margin-top: 0; /* Remove margin from top */
-            margin-bottom: -20px;
+            margin: 0;
         }
 
         .subtitle {
@@ -38,7 +37,6 @@
             margin-bottom: 20px;
         }
 
-        /* Dropdown Menu Styling */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -48,8 +46,8 @@
         .dropdown .dropbtn {
             background-color: #ff0000;
             color: white;
-            padding: 10px 20px; /* Adjust padding for better scaling */
-            font-size: 1rem; /* Use rem for consistent scaling */
+            padding: 10px 20px;
+            font-size: 1rem;
             border: none;
             cursor: pointer;
             border-radius: 5px;
@@ -66,8 +64,7 @@
             display: none;
             position: absolute;
             background-color: #333;
-            width: 160px; /* Fixed width to ensure it's not too large */
-            max-width: 250px; /* Prevent too wide dropdown */
+            width: 160px;
             z-index: 1;
             border-radius: 5px;
             top: 100%;
@@ -77,7 +74,6 @@
             transition: opacity 0.3s ease;
         }
 
-        /* Show the dropdown when hovering over the dropdown button */
         .dropdown:hover .dropdown-content {
             display: block;
             opacity: 1;
@@ -88,8 +84,8 @@
             padding: 10px;
             text-decoration: none;
             display: block;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 0.9rem; /* Adjust font size */
+            font-family: 'Comic Neue', cursive, sans-serif;
+            font-size: 0.9rem;
             text-align: center;
             border: 2px solid transparent;
             border-radius: 5px;
@@ -103,7 +99,6 @@
             border-color: white;
         }
 
-        /* Main Images (Calling Cards) */
         .image-container {
             display: flex;
             justify-content: center;
@@ -124,7 +119,6 @@
             transform: scale(1.1);
         }
 
-        /* Footer Images */
         .footer-container {
             display: flex;
             justify-content: center;
@@ -163,20 +157,29 @@
 
             .image-container {
                 flex-direction: column;
+                align-items: center;
                 gap: 20px;
+            }
+
+            .image-container a {
+                width: 100%;
+                text-align: center;
             }
 
             .image-container img {
                 width: 80%;
+                margin: 0 auto;
             }
 
             .footer-container {
-                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
                 gap: 5px;
             }
 
             .footer-container img {
-                width: 40%;
+                width: 40px;
+                height: auto;
             }
         }
     </style>
@@ -187,7 +190,6 @@
 
     <p class="subtitle">The 100% King</p>
 
-    <!-- Dropdown Menu -->
     <div class="dropdown">
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
@@ -196,20 +198,18 @@
         </div>
     </div>
 
-    <!-- Main Images (Calling Cards) -->
     <div class="image-container">
         <a href="multiplayer.html"><img src="multiplayerCC.webp" alt="Multiplayer"></a>
         <a href="warzone.html"><img src="warzoneCC.webp" alt="Warzone"></a>
         <a href="zombies.html"><img src="zombiesCC.webp" alt="Zombies"></a>
     </div>
 
-    <!-- Footer Images -->
     <div class="footer-container">
-        <a href="https://discord.gg/GndesVxswF" target="_blank"><img src="Discord.png" alt="Image 1"></a>
-        <a href="https://www.youtube.com/@King-Roberts" target="_blank"><img src="Youtube.png" alt="Image 2"></a>
-        <a href="https://www.instagram.com/john__roberts__/" target="_blank"><img src="Instagram.png" alt="Image 3"></a>
-        <a href="https://www.twitch.tv/kingrobertsyt" target="_blank"><img src="Twitch.png" alt="Image 4"></a>
-        <a href="https://x.com/Kingroberts1st" target="_blank"><img src="Twitter.png" alt="Image 5"></a>
+        <a href="https://discord.gg/GndesVxswF" target="_blank"><img src="Discord.png" alt="Discord"></a>
+        <a href="https://www.youtube.com/@King-Roberts" target="_blank"><img src="Youtube.png" alt="YouTube"></a>
+        <a href="https://www.instagram.com/john__roberts__/" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+        <a href="https://www.twitch.tv/kingrobertsyt" target="_blank"><img src="Twitch.png" alt="Twitch"></a>
+        <a href="https://x.com/Kingroberts1st" target="_blank"><img src="Twitter.png" alt="Twitter"></a>
     </div>
 </body>
 </html>
