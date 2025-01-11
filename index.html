@@ -14,6 +14,7 @@
             background-color: #000;
             color: white;
             min-height: 100vh;
+
         }
 
         h1 {
@@ -27,6 +28,7 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 1px white;
             margin-bottom: -20px;
+          
         }
 
         .subtitle {
@@ -35,6 +37,67 @@
             color: #FF8C00;
             text-align: center;
             margin-bottom: 20px;
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .dropdown .dropbtn {
+            background-color: #FF8C00;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2vw;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown .dropbtn:hover {
+            background-color: #ff7f00;
+            transform: scale(1.1);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+            border-radius: 5px;
+            margin-top: 5px; /* Spacing between button and dropdown */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            left: 50%; /* Center the dropdown horizontally */
+            transform: translateX(-50%); /* Adjust for perfect centering */
+        }
+
+        /* Comic Sans-like font for dropdown items */
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans-like font */
+            font-size: 1.2vw;
+            text-align: center; /* Center the text */
+            border: 2px solid white; /* Add white outline */
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 5px 0; /* Space between each option */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
         }
 
         .image-container {
@@ -51,7 +114,11 @@
             height: 75px; /* Maintain aspect ratio */
             border: 2px solid #FF8C00;
             border-radius: 10px;
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
         }
 
         .footer-container {
@@ -59,7 +126,7 @@
             justify-content: center; /* Center all images horizontally */
             align-items: center;
             width: 100%; /* Ensure it spans the bottom */
-            gap: 15px; /* Slightly increased gap to prevent overlap when zoomed */
+            gap: 10px; /* Adjusted gap between images */
             padding: 10px 0; /* Padding for spacing */
             margin-top: auto; /* Ensure footer is pushed to the bottom */
         }
@@ -70,23 +137,11 @@
             border: 2px solid white;
             border-radius: 10px;
             filter: invert(1); /* Invert the colors of the image */
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
+            transition: transform 0.3s ease;
         }
 
-        /* Hover effect for clickable links (images inside <a>) */
-        a:hover img {
-            transform: scale(1.1); /* Slightly scale up the image */
-        }
-
-        /* Hover effect for the link itself */
-        a:hover {
-            text-decoration: none; /* Removes the underline if desired */
-        }
-
-        /* Hover effect for footer and main images */
-        .footer-container a:hover, .image-container a:hover {
-            transform: scale(1.1); /* Scale the <a> tag itself */
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        .footer-container img:hover {
+            transform: scale(1.1);
         }
 
         a {
@@ -129,6 +184,16 @@
     <h1><a href="index.html">King Roberts</a></h1>
 
     <p class="subtitle">The 100% King</p>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+            <a href="multiplayer.html">Multiplayer</a>
+            <a href="warzone.html">Warzone</a>
+            <a href="zombies.html">Zombies</a>
+        </div>
+    </div>
 
     <!-- Main Images -->
     <div class="image-container">
