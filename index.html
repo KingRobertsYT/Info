@@ -51,6 +51,7 @@
             height: 75px; /* Maintain aspect ratio */
             border: 2px solid #FF8C00;
             border-radius: 10px;
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
         }
 
         .footer-container {
@@ -58,7 +59,7 @@
             justify-content: center; /* Center all images horizontally */
             align-items: center;
             width: 100%; /* Ensure it spans the bottom */
-            gap: 0; /* No gap between images */
+            gap: 15px; /* Slightly increased gap to prevent overlap when zoomed */
             padding: 10px 0; /* Padding for spacing */
             margin-top: auto; /* Ensure footer is pushed to the bottom */
         }
@@ -69,6 +70,23 @@
             border: 2px solid white;
             border-radius: 10px;
             filter: invert(1); /* Invert the colors of the image */
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+
+        /* Hover effect for clickable links (images inside <a>) */
+        a:hover img {
+            transform: scale(1.1); /* Slightly scale up the image */
+        }
+
+        /* Hover effect for the link itself */
+        a:hover {
+            text-decoration: none; /* Removes the underline if desired */
+        }
+
+        /* Hover effect for footer and main images */
+        .footer-container a:hover, .image-container a:hover {
+            transform: scale(1.1); /* Scale the <a> tag itself */
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
         }
 
         a {
