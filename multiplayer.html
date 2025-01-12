@@ -3,131 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>King Roberts</title>
+    <title>King Roberts - Multiplayer</title>
+    <link href="https://fonts.googleapis.com/css2?family=King+Roberts&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
     <style>
-        body {
+        /* General Reset */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Comic Neue', sans-serif;
+            background-color: #fff;
+            color: #333;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            background-color: #000;
-            color: white;
-            font-family: 'Comic Neue', sans-serif;
         }
 
-        h1 {
-            font-size: 80px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-align: center;
-            background: linear-gradient(to bottom, #ff0000, black);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 1px white;
-            margin-top: 0; /* Remove margin from top */
-            margin-bottom: -40px;
-        }
-
-        .subtitle {
-            font-size: 24px;
-            font-family: 'Pacifico', cursive;
-            color: #ff0000; 
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .current-stats {
-            font-size: 30px;
-            font-weight: bold;
-            text-decoration: underline;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .stats {
+        /* Header Section */
+        header {
             display: flex;
             justify-content: space-between;
-            width: 80%;
-            text-align: center;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 1px solid #ccc;
         }
 
-        .stat-container {
-            margin-bottom: 20px;
-            width: 30%;
+        .main-heading {
+            font-family: 'King Roberts', serif;
+            font-size: 3rem;
+            letter-spacing: 1px;
         }
 
-        .stat-item {
-            font-size: 20px;
-            text-decoration: underline;
-            margin-bottom: 10px;
+        .main-heading a {
+            text-decoration: none;
+            color: #333;
         }
 
-        .stat-value {
-            font-size: 18px;
+        .subheading {
+            font-family: 'King Roberts', serif;
+            font-size: 1rem;
+            font-weight: lighter;
+            letter-spacing: 1px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            font-size: 1.2rem;
+            color: #333;
+            text-decoration: none;
+            padding: 10px 10px;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
             color: #ff0000;
         }
 
-        .image-container {
-            display: flex; /* Align images side by side */
-            justify-content: center; /* Center the images horizontally */
-            align-items: center; /* Align them vertically if necessary */
-            gap: 20px; /* Adds space between the images */
-            width: 80%; /* Ensure the images stay within the page width */
-            margin-top: 40px;
+        /* Stats Section */
+        .stats {
+            padding: 50px;
+            text-align: center;
         }
 
-        .image-container a {
-            display: block; /* Ensures the entire area of the image is clickable */
-            width: 30%; /* Makes the images take up 30% of the container width */
+        .stats h3 {
+            font-family: 'King Roberts', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
-        .multiplayer-image {
-            width: 100%; /* Makes sure the image fills the container width */
-            height: auto; /* Maintain aspect ratio */
-            border: 5px solid #ff0000;
+        .stats p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .stats .stat-item {
+            margin-top: 20px;
+        }
+
+        /* Image Grid Section */
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Stack images on smaller screens */
+            gap: 30px; /* Larger gap for stacked images */
+            padding: 10px;
+            justify-items: center; /* Center images horizontally */
+            align-items: center; /* Center images vertically */
+            margin-top: 20px;
+        }
+
+        /* On larger screens, make images side-by-side with no more than 10px gap */
+        @media (min-width: 1024px) {
+            .image-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 images side by side */
+                gap: 10px; /* Reduced gap between images */
+                width: 70rem; /* Increase container width for more space */
+                margin-top: 40px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .image-grid a {
+            display: block;
+            width: 100%;
+            max-width: 380px; /* Consistent image size */
+            aspect-ratio: 16/9;
+            overflow: hidden;
             border-radius: 10px;
-            display: block; /* Remove space below the image */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-grid a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 2px solid red; /* Red border to match multiplayer theme */
+            border-radius: 10px;
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+            background-color: #f4f4f4;
+            margin-top: auto;
+        }
+
+        .social-media a img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media a img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        footer p {
+            margin-top: 10px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1><a href="index.html" style="color: white; text-decoration: none;">King Roberts</a></h1>
-    <p class="subtitle">The 100% King</p>
+    <header>
+        <div>
+            <h1 class="main-heading"><a href="index.html">King Roberts</a></h1>
+            <h2 class="subheading">The 100% King</h2>
+        </div>
+        <div class="menu">
+            <a href="Merch.html">Merch</a>
+            <a href="Settings.html">Settings</a>
+        </div>
+    </header>
 
-    <div class="current-stats">Current Stats</div>
-    
+    <!-- Stats Section -->
     <div class="stats">
-        <div class="stat-container">
-            <div class="stat-item">Time Played</div>
-            <div class="stat-value">6D 21H 46M</div>
-        </div>
-
-        <div class="stat-container">
-            <div class="stat-item">Eliminations</div>
-            <div class="stat-value">26,947</div>
-        </div>
-
-        <div class="stat-container">
-            <div class="stat-item">Elim/D Ratio</div>
-            <div class="stat-value">1.61</div>
-        </div>
+        <h3>Current Stats</h3>
+        <p class="stat-item">Time Played: 8D 19H 23M</p>
+        <p class="stat-item">Eliminations: 431,746</p>
+        <p class="stat-item">Highest Round: 111</p>
     </div>
 
-    <!-- Image section with three clickable images side by side -->
-    <div class="image-container">
-        <a href="https://www.youtube.com/watch?v=lS25fHSf9uo" target="_blank">
-            <img src="Darkmatter.jpg" alt="Multiplayer Image 1" class="multiplayer-image">
+    <!-- Image Grid Section -->
+    <div class="image-grid">
+        <a href="https://www.youtube.com/watch?v=XDPNN19dWtQ" target="_blank">
+            <img src="Multiplayer100.jpg" alt="Multiplayer Image 1">
         </a>
-        <a href="https://www.youtube.com/watch?v=Oe8fyWZB12g&t=1288s" target="_blank">
-            <img src="Multiplayer100.jpg" alt="Multiplayer Image 2" class="multiplayer-image">
+        <a href="https://www.youtube.com/watch?v=z6_smzE7bto&t=2s" target="_blank">
+            <img src="Darkmatter.jpg" alt="Multiplayer Image 2">
         </a>
-        <a href="https://www.youtube.com/watch?v=aKnGocGLwWs&t=1s" target="_blank">
-            <img src="Iri.jpg" alt="Multiplayer Image 3" class="multiplayer-image">
+        <a href="https://www.youtube.com/watch?v=XDPNN19dWtQ" target="_blank">
+            <img src="Iri.jpg" alt="Multiplayer Image 3">
         </a>
     </div>
 
+    <!-- Social Media Icons -->
+    <div class="social-media">
+        <a href="https://discord.com" target="_blank"><img src="discord.png" alt="Discord"></a>
+        <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+        <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://twitch.tv" target="_blank"><img src="twitch.png" alt="Twitch"></a>
+        <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 King Roberts. All rights reserved.</p>
+    </footer>
 </body>
 </html>
