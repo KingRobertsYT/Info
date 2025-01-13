@@ -85,6 +85,7 @@
             justify-content: center;
             gap: 30px;
             padding: 50px;
+            flex-wrap: wrap;
         }
 
         .image-grid a {
@@ -139,6 +140,19 @@
         footer p {
             margin-top: 10px;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-grid a {
+                width: 90%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -171,7 +185,7 @@
         <a href="https://discord.com" target="_blank"><img src="discord.png" alt="Discord"></a>
         <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"></a>
         <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
-        <a href="https://twitch.tv" target="_blank"><img src="twitch.png" alt="Twitch"></a>
+        <a href="https://twitch.tv" target="_blank"><img src="Twitch.png" alt="Twitch"></a>
         <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
     </div>
 
