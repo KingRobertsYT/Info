@@ -19,9 +19,10 @@
             font-family: 'Comic Neue', sans-serif;
             background-color: #fff;
             color: #333;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            justify-content: space-between; /* Ensures footer stays at the bottom */
         }
 
         /* Header Section */
@@ -137,26 +138,6 @@
             border-radius: 10px;
         }
 
-        /* Social Media Icons */
-        .social-media {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px 0;
-            background-color: #f4f4f4;
-            margin-top: auto;
-        }
-
-        .social-media a img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-media a img:hover {
-            transform: scale(1.2);
-        }
-
         /* Footer */
         footer {
             text-align: center;
@@ -167,6 +148,27 @@
 
         footer p {
             margin-top: 10px;
+        }
+
+
+        /* Social Media Icons */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 0;
+            padding-bottom: 0;
+            background-color: #f4f4f4;
+        }
+
+        .social-media a img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media a img:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -204,16 +206,18 @@
     </div>
 
     <!-- Social Media Icons -->
-    <div class="social-media">
-        <a href="https://discord.com" target="_blank"><img src="discord.png" alt="Discord"></a>
-        <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"></a>
-        <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
-        <a href="https://twitch.tv" target="_blank"><img src="twitch.png" alt="Twitch"></a>
-        <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-    </div>
+    <div class="footer-container">
+        <div class="social-media">
+            <a href="https://discord.com" target="_blank"><img src="Discord.png" alt="Discord"></a>
+            <a href="https://youtube.com" target="_blank"><img src="Youtube.png" alt="YouTube"></a>
+            <a href="https://twitter.com" target="_blank"><img src="Twitter.png" alt="Twitter"></a>
+            <a href="https://twitch.tv" target="_blank"><img src="Twitch.png" alt="Twitch"></a>
+            <a href="https://instagram.com" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 King Roberts. All rights reserved.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 King Roberts. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
