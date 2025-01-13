@@ -24,6 +24,11 @@
             flex-direction: column;
         }
 
+        /* Content Wrapper */
+        .content-wrapper {
+            flex-grow: 1;
+        }
+
         /* Header */
         header {
             display: flex;
@@ -172,37 +177,39 @@
     </style>
 </head>
 <body>
-    <header>
-        <!-- Logo with embedded link and rounded corners -->
-        <div class="header-image-wrapper">
-            <a href="index.html">
-                <img src="KRbackground.png" alt="King Roberts Logo"> <!-- Replace with your logo file -->
+    <div class="content-wrapper">
+        <header>
+            <!-- Logo with embedded link and rounded corners -->
+            <div class="header-image-wrapper">
+                <a href="index.html">
+                    <img src="KRbackground.png" alt="King Roberts Logo"> <!-- Replace with your logo file -->
+                </a>
+            </div>
+
+            <!-- Merch and Settings Buttons -->
+            <div class="header-buttons">
+                <a href="merch.html" class="header-button">Merch</a>
+                <a href="settings.html" class="header-button">Settings</a>
+            </div>
+        </header>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <h3>Current Stats</h3>
+            <p class="stat-item">Time Played: 8D 19H 23M</p>
+            <p class="stat-item">Eliminations: 431,746</p>
+            <p class="stat-item">Highest Round: 111</p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <a href="https://www.youtube.com/watch?v=XDPNN19dWtQ" target="_blank">
+                <img src="Zombie100.jpg" alt="Zombies Image 1" class="zombies-image">
+            </a>
+            <a href="https://www.youtube.com/watch?v=z6_smzE7bto&t=2s" target="_blank">
+                <img src="Nebula.jpg" alt="Zombies Image 2" class="zombies-image">
             </a>
         </div>
-
-        <!-- Merch and Settings Buttons -->
-        <div class="header-buttons">
-            <a href="merch.html" class="header-button">Merch</a>
-            <a href="settings.html" class="header-button">Settings</a>
-        </div>
-    </header>
-
-    <!-- Stats Section -->
-    <div class="stats">
-        <h3>Current Stats</h3>
-        <p class="stat-item">Time Played: 8D 19H 23M</p>
-        <p class="stat-item">Eliminations: 431,746</p>
-        <p class="stat-item">Highest Round: 111</p>
-    </div>
-
-    <!-- Image Section -->
-    <div class="image-container">
-        <a href="https://www.youtube.com/watch?v=XDPNN19dWtQ" target="_blank">
-            <img src="Zombie100.jpg" alt="Zombies Image 1" class="zombies-image">
-        </a>
-        <a href="https://www.youtube.com/watch?v=z6_smzE7bto&t=2s" target="_blank">
-            <img src="Nebula.jpg" alt="Zombies Image 2" class="zombies-image">
-        </a>
     </div>
 
     <!-- Social Media Icons -->
