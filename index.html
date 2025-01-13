@@ -42,24 +42,25 @@
             border-bottom: 1px solid #ccc; /* Faint grey line */
         }
 
-        .main-heading {
-            font-family: 'King Roberts', serif;
-            font-size: 3rem;
-            letter-spacing: 1px;
+        /* Image for header */
+        .header-image-wrapper {
+            width: 200px; /* Set the desired width */
+            height: auto;
+            border-radius: 20px; /* Round the corners of the image */
+            overflow: hidden; /* Prevent the image from spilling out of the border */
         }
 
-        .main-heading a {
-            text-decoration: none;
-            color: #333;
+        .header-image-wrapper a {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
 
-        .subheading {
-            font-family: 'King Roberts', serif;
-            font-size: 1rem;
-            font-weight: lighter;
-            letter-spacing: 1px;
-            color: #555;
-            margin-top: 5px;
+        .header-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+            border-radius: 20px; /* Round the corners of the image */
         }
 
         .menu {
@@ -122,7 +123,6 @@
             margin-top: 10px;
         }
 
-
         /* Social Media Icons */
         .social-media {
             display: flex;
@@ -159,9 +159,10 @@
 </head>
 <body>
     <header>
-        <div>
-            <h1 class="main-heading"><a href="index.html">King Roberts</a></h1>
-            <h2 class="subheading">The 100% King</h2>
+        <div class="header-image-wrapper">
+            <a href="index.html"> <!-- Add the link you want the image to go to -->
+                <img src="KRbackground.png" alt="King Roberts Logo"> <!-- Replace with your logo image -->
+            </a>
         </div>
         <div class="menu">
             <a href="Merch.html">Merch</a>
